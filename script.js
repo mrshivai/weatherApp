@@ -7,7 +7,7 @@ output = document.getElementById("output");
 searchCity = document.getElementById("searchCity");
 getWeather = document.getElementById("getWeather");
 
-url = "http://api.weatherapi.com/v1";
+url = "https://api.weatherapi.com/v1";
 api = "b1d04b48ca6d4e0a92d113222230304";
 
 const result = () => {
