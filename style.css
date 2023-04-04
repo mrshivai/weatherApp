@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  position: relative;
+  top: 30px;
+  margin: auto;
+  background-color: aliceblue;
+  border: 2px solid black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 350px;
+  height: 450px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#searchCity {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+#getWeather {
+  padding: 8px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(39, 6, 146, 0.932);
+  color: white;
+}
+
+#output {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#output div{
+  background-color: gainsboro;
+  width: 250px;
+  margin: 2px;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#output #icon{
+  all:unset;
+}
