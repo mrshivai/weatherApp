@@ -8,7 +8,7 @@ searchCity = document.getElementById("searchCity");
 getWeather = document.getElementById("getWeather");
 
 url = "https://api.weatherapi.com/v1";
-api = "b1d04b48ca6d4e0a92d113222230304";
+api = "2d71c6127c8642e392332231230404";
 
 const result = () => {
     cityName = searchCity.value;
