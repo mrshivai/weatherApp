@@ -10,11 +10,24 @@ getWeather = document.getElementById("getWeather");
 url = "https://api.weatherapi.com/v1";
 api = "2d71c6127c8642e392332231230404";
 
+if(!navigator.onLine){document.body.innerHTML = "<h1 id ='offline'> Please check your Internet connection. without internet connection we can't fetch data from api.<h1>"};
+
+window.addEventListener("offline", () => document.body.innerHTML = "<h1 id ='offline'> Please check your Internet connection. without internet connection we can't fetch data from api.<h1>");
+
+window.addEventListener("online", () => location.reload());
+
 const result = () => {
     cityName = searchCity.value;
 
     fetch(`${url}/current.json?key=${api}&q=${cityName}`)
-        .then(response => response.json())
+        .then(response => {
+            if (response.status === 403) {
+                throw new Error("<h3>check api key isn't expired. if api key expire then go <a href='https://www.weatherapi.com/my/'>Weather API</a> and get new key<h3>")
+            }
+
+            return response.json()
+
+        })
         .then(data => {
             icon = data.current.condition.icon;
             city = data.location.name;
@@ -27,7 +40,7 @@ const result = () => {
 
             output.innerHTML = `
             <div id="icon">
-          <img src="${icon}" alt="" />
+            <img src="${icon}" alt="" />
         </div>
         <div id="city">City : ${city}</div>
         <div id="region">Region : ${region}</div>
