@@ -20,6 +20,14 @@
   height: 450px;
 }
 
+#offline {
+  display: block;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  top: 100px;
+}
+
 h1 {
   text-align: center;
 }
@@ -36,6 +44,7 @@ h1 {
   border-radius: 10px;
   background-color: rgba(39, 6, 146, 0.932);
   color: white;
+  cursor: pointer;
 }
 
 #output {
@@ -48,16 +57,16 @@ h1 {
   margin: 10px;
 }
 
-#output div{
+#output div {
   background-color: gainsboro;
   width: 250px;
   margin: 2px;
   padding: 2px;
   border: 1px solid black;
   border-radius: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-#output #icon{
-  all:unset;
+#output #icon {
+  all: unset;
 }
